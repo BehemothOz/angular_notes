@@ -6,15 +6,19 @@ import { SettingsComponent } from './settings/settings.component';
 import { NotesComponent } from './notes/notes.component';
 
 import { NotesService } from './shared/notes.service';
+import { AppRoutingModule } from './/app-routing.module';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SettingsComponent,
-    NotesComponent
+    NotesComponent,
+    FormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [NotesService],
   bootstrap: [AppComponent]
