@@ -1,3 +1,17 @@
-<p>
-  form works!
-</p>
+
+<label for="title">Заголовок</label>
+<input type="text" id="title" #noteTitle>
+
+<br>
+
+<label for="desc">Описание</label>
+<input type="text" id="desc" #noteDesc>
+
+<br>
+
+
+<div class="control-panel">
+  <button (click)="onSave(noteTitle.value, noteDesc.value)">Добавить</button>
+  <button (click)="onCancel()">Отмена</button>
+  <button>Удалить</button>
+</div>

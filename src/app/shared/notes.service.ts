@@ -17,7 +17,9 @@ export class NotesService {
 
   // update(note: Note) {}
 
-  // create(note: Note) {}
+  create(note: Note): void {
+    this.data.unshift(note);
+  }
 
   // delete(note: Note) {}
 }

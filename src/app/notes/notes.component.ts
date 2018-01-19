@@ -13,7 +13,7 @@ export class NotesComponent implements OnInit {
 
   constructor(private service: NotesService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.notes = this.service.getAll();
   }
 
