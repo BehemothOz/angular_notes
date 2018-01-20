@@ -12,16 +12,20 @@ import { Router } from "@angular/router";
 
 export class FormComponent implements OnInit {
 
+  bgTitleColor: string = 'orange';
+
   constructor(private service: NotesService, private router: Router) { }
 
   ngOnInit() {
   }
 
   onSave(title: string, desc: string): void {
-    console.log(new Note(title, desc));
-    this.service.create(new Note(title, desc));
-    console.log(this.service.getAll());
+    this.service.create(new Note(title, desc, this.bgTitleColor));
     this.goToNotes();
+  }
+
+  setBgTitleColor(colorName: string): void {
+    this.bgTitleColor = colorName;
   }
 
   onCancel(): void {

@@ -1,8 +1,12 @@
-<div class="note" *ngFor="let note of notes">
-  <div class="note-header">
-    <h2 class="title">{{ note.title }}</h2>
+<div class="container container-notes">
+  <div class="note" *ngFor="let note of notes">
+    <div [ngClass]="['note-header', note.bgTitleColor]">
+      <h2 class="title">{{ note.title }}</h2>
+    </div>
+    <div class="note-body">
+      <p class="desc">{{ note.description }}</p>
+    </div>
   </div>
-  <div class="note-body">
-    <p class="desc">{{ note.description }}</p>
-  </div>
+
+  <a class="add-note" routerLink="create"></a>
 </div>

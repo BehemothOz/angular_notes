@@ -8,7 +8,7 @@ import { FormComponent } from './form/form.component';
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'notes' },
   { path: 'notes', component: NotesComponent },
-  { path: 'form', component: FormComponent },
+  { path: 'notes/create', component: FormComponent },
   { path: 'settings', component: SettingsComponent }
 ]
 

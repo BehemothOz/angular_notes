@@ -1,3 +1,7 @@
+.container-notes {
+  min-height: calc(100vh - 54px);
+}
+
 .note {
   margin-bottom: 15px;
   border-radius: 4px;
@@ -5,8 +9,19 @@
 
   .note-header {
     padding: 15px 20px;
-    background-color: #FF9800;
     border-radius: 4px 4px 0 0;
+
+    &.orange {
+      background-color: #FF9800;
+    }
+
+    &.blue {
+      background-color: #2196F3;
+    }
+
+    &.purple {
+      background-color: #9C27B0;
+    }
 
     .title {
       font-size: 18px;

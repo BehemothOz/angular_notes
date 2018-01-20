@@ -1,17 +1,57 @@
+<div class="container container-form">
+  <div class="form-group">
+    <label class="label" for="title">Заголовок</label>
+    <input class="input" type="text" id="title" #noteTitle>
+  </div>
 
-<label for="title">Заголовок</label>
-<input type="text" id="title" #noteTitle>
+  <div class="form-group">
+      <div class="label">Фон заголовка</div>
+      <label class="radio-color">
+        <input 
+          class="input-color"
+          type="radio"
+          name="bg-color"
+          value="orange"
+          checked
+          #radioOrange
+          (change)="setBgTitleColor(radioOrange.value)">
+        <span class="color orange"></span>
+      </label>
+      <label class="radio-color">
+        <input
+          class="input-color"
+          type="radio"
+          name="bg-color"
+          value="blue"
+          #radioBlue
+          (change)="setBgTitleColor(radioBlue.value)">
+        <span class="color blue"></span>
+      </label>
+      <label class="radio-color">
+        <input
+          class="input-color"
+          type="radio"
+          name="bg-color"
+          value="purple"
+          #radioPurple
+          (change)="setBgTitleColor(radioPurple.value)">
+        <span class="color purple"></span>
+      </label>
+  </div>
 
-<br>
-
-<label for="desc">Описание</label>
-<input type="text" id="desc" #noteDesc>
-
-<br>
-
+  <div class="form-group">
+    <label class="label" for="desc">Описание</label>
+    <textarea class="textarea" type="text" id="desc" rows="12" #noteDesc></textarea>
+  </div>
+</div>
 
 <div class="control-panel">
-  <button (click)="onSave(noteTitle.value, noteDesc.value)">Добавить</button>
-  <button (click)="onCancel()">Отмена</button>
-  <button>Удалить</button>
+  <button
+    class="btn-panel btn-panel-cancel"
+    (click)="onCancel()"></button>
+  <button
+    class="btn-panel btn-panel-save"
+    (click)="onSave(noteTitle.value, noteDesc.value)"></button>
+  <button
+    class="btn-panel btn-panel-delete"></button>
 </div>
